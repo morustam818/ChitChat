@@ -17,7 +17,9 @@ class EmailAuthentication(private val activity: Activity, private val username :
         mAuth.signInWithEmailAndPassword(email,password)
             .addOnCompleteListener {
                 if (it.isSuccessful){
-                    Toast.makeText(activity.applicationContext,"Successful",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity.applicationContext,"Welcome back",Toast.LENGTH_SHORT).show()
+                    activity.startActivity(Intent(activity.applicationContext,MainActivity::class.java))
+                    activity.finish()
                 }else{
                     Toast.makeText(activity.applicationContext,it.exception?.message,Toast.LENGTH_SHORT).show()
                 }

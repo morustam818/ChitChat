@@ -2,46 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_userProfile"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@mipmap/ic_launcher_round"/>
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black90"
+        android:layout_centerInParent="true"
         android:layout_marginStart="16dp"
         android:layout_toEndOf="@id/iv_userProfile"
-        android:layout_centerInParent="true"
-        android:textSize="18sp"/>
+        android:textColor="@color/black90"
+        android:textSize="18sp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/online"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_below="@id/tv_username"
+        android:layout_marginStart="-13dp"
         android:layout_marginTop="10dp"
-        android:visibility="gone"
-        android:background="@drawable/ic_lens"
         android:layout_toEndOf="@id/iv_userProfile"
-        android:layout_marginStart="-13dp"/>
+        android:background="@drawable/ic_lens"
+        android:visibility="gone" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/offline"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_below="@id/tv_username"
+        android:layout_marginStart="-13dp"
         android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/iv_userProfile"
         android:background="@drawable/ic_lens"
         android:backgroundTint="@color/placeholder"
-        android:visibility="gone"
-        android:layout_toEndOf="@id/iv_userProfile"
-        android:layout_marginStart="-13dp"/>
+        android:visibility="gone" />
 
 </RelativeLayout>
